@@ -1,0 +1,6 @@
+# Runtime mínimo de los ejemplos publicables; pesos y datos se proporcionan aparte.
+numpy==2.2.6
+opencv-python-headless==4.12.0.88
+PyYAML==6.0.3
+scipy==1.16.2
+matplotlib==3.10.6
