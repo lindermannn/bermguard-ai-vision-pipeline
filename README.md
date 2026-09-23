@@ -1,7 +1,9 @@
 # BermGuard — AI-assisted computer vision pipeline
 
 Repositorio público curado para documentar una prueba técnica de seis días sobre
-monitoreo de vehículos mineros y pretiles.
+monitoreo de vehículos mineros y pretiles. La publicación de esta selección de
+documentos está autorizada; la implementación entregada para la prueba sigue
+fuera de este repositorio.
 
 El proyecto combina segmentación, propagación temporal de máscaras, tracking,
 geometría de cámara, validación reproducible y automatización asistida por IA.
@@ -36,19 +38,19 @@ Las distancias de Método 2 son estimaciones basadas en referencias dimensionale
 un FOV supuesto cuando no existe una calibración externa; el sistema debe reportar
 la limitación explícitamente.
 
-## Reproducibilidad
+## Qué se puede verificar aquí
 
-El código publicable debe poder ejecutarse con datos sintéticos o propios:
+Este repositorio contiene documentación y un verificador de publicación. No
+incluye el pipeline ejecutable, los tests de la implementación, los modelos ni
+los videos de la prueba. La comprobación local disponible es:
 
 ```bash
-python -m venv .venv
-python -m pip install -r requirements.txt
-python -m pytest -q
 python scripts/validate_publication.py
 ```
 
-Los videos y modelos se inyectan fuera del repositorio mediante variables o rutas
-locales documentadas. No se descargan datos privados durante las pruebas.
+El resultado esperado es `PUBLICATION_AUDIT_OK`. Este control busca artefactos
+privados, rutas absolutas y cadenas similares a secretos en los archivos
+publicados; no reproduce ni valida el desempeño del sistema de visión.
 
 ## Documentación
 
@@ -58,8 +60,9 @@ locales documentadas. No se descargan datos privados durante las pruebas.
 - [Limitaciones y honestidad experimental](docs/LIMITATIONS.md)
 - [Auditoría antes del primer commit](docs/PRE_PUBLISH_AUDIT.md)
 
-## Licencia
+## Publicación y licencia
 
-La licencia del repositorio debe decidirse después de revisar los términos de la
-prueba, Ultralytics/YOLO, SAM-2 y los checkpoints. Hasta cerrar esa revisión, el
-repositorio debe permanecer privado.
+La publicación de este repositorio documental curado está autorizada. No se
+publican pesos, videos, datasets ni código de terceros. No se ha añadido una
+licencia de reutilización al contenido; la autorización de publicación no
+equivale a conceder permisos de reutilización del proyecto o de la entrega.

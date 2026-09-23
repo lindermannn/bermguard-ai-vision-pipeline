@@ -9,7 +9,10 @@ de integridad y un ejecutor Docker reproducible. Usé IA y MCP para acelerar la
 exploración y automatización, manteniendo validación humana y trazabilidad de las
 decisiones.
 
-## Evidencia que debe acompañar el repositorio
+## Evidencia adicional para una revisión técnica privada
+
+El repositorio público actual no contiene los siguientes artefactos. Sólo se
+compartirían por separado tras revisar permisos y datos de cada elemento:
 
 - Diagrama del pipeline.
 - Un fixture sintético reproducible.
@@ -18,9 +21,9 @@ decisiones.
 - Un gráfico de trayectoria o distancia sin frames privados.
 - Un registro de limitaciones y decisiones descartadas.
 
-## Preguntas que el repositorio debe responder
+## Preguntas para una revisión técnica
 
-1. ¿Qué ocurre si no existe una máscara del pretil? — Se publica N/D con motivo.
+1. ¿Qué ocurre si no existe una máscara del pretil? — El sistema devuelve N/D con motivo.
 2. ¿Qué ocurre durante una oclusión? — El tracker predice durante un TTL y separa
    observación de predicción.
 3. ¿Cómo se evita inventar metros? — La geometría exige un modelo válido y deja

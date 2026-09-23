@@ -6,16 +6,15 @@ Presentar en una selección técnica una demostración verificable de seis días
 trabajo con visión computacional, IA asistida, MCP, automatización de pipelines y
 validación, sin publicar material confidencial de la prueba.
 
-## Decisión de publicación
+## Estado de publicación
 
-1. Crear primero un repositorio privado.
-2. Publicar sólo código, documentación redactada, fixtures sintéticos y métricas
-   que no permitan reconstruir los videos originales.
-3. Mantener la entrega enviada y el archivo histórico fuera del repositorio público.
-4. Hacer una revisión legal/licencias antes de volverlo público.
-5. No hacer `push` hasta revisar el informe de `validate_publication.py`.
+La publicación del repositorio curado está autorizada y el repositorio ya es
+público. Esta versión contiene documentación y el verificador de publicación;
+la entrega, el código del pipeline, los tests, videos, pesos y el archivo
+histórico siguen fuera. Antes de cada actualización pública se ejecuta
+`validate_publication.py` y se revisa el diff y el historial afectado.
 
-## Material permitido
+## Material que podría publicarse tras revisión específica
 
 - Código propio de geometría, tracking, fusión y validación.
 - Configuraciones de ejemplo sin rutas personales.
@@ -35,7 +34,7 @@ validación, sin publicar material confidencial de la prueba.
 - El ZIP enviado como artefacto de selección.
 - Prompts o documentos que reproduzcan el enunciado confidencial completo.
 
-## Estructura de ramas
+## Estructura de ramas propuesta para futuras ampliaciones
 
 ```text
 main              versión publicable y reproducible
@@ -43,7 +42,7 @@ release/selection versión preparada para enviar a reclutadores
 work/*            cambios experimentales, nunca datos privados
 ```
 
-## Historia de commits sugerida
+## Historia de commits sugerida para futuras ampliaciones
 
 ```text
 docs: define project scope and responsible disclosure
@@ -67,13 +66,13 @@ narrativa debe mostrar que se construyó un sistema verificable:
 - se automatizaron empaquetado, pruebas, hashes y validaciones;
 - se documentaron las limitaciones en lugar de inventar precisión.
 
-## Checklist antes de `git push`
+## Checklist antes de futuras ampliaciones públicas
 
 - [ ] El repositorio no contiene videos, pesos, secretos ni rutas personales.
 - [ ] `validate_publication.py` termina con código 0.
-- [ ] Tests pasan en un entorno limpio.
+- [ ] Si se añade código ejecutable, sus tests pasan en un entorno limpio.
 - [ ] Cada gráfico tiene origen y limitación documentados.
-- [ ] Las licencias de Ultralytics, SAM-2 y modelos están revisadas.
-- [ ] README explica instalación y una ejecución sintética.
+- [ ] Si se añaden dependencias, modelos o pesos, sus licencias y permisos de distribución están revisados.
+- [ ] Si se añade código ejecutable, el README explica instalación y ejecución sintética.
 - [ ] El historial no contiene un secreto borrado posteriormente.
 - [ ] Se hizo revisión final como si el reclutador no conociera el contexto.
